@@ -9,11 +9,14 @@ from langserve import add_routes
 import getpass
 import os
 
-print("enter LANGCHAIN_API_KEY:")
-os.environ["LANGCHAIN_API_KEY"] = getpass.getpass()
-os.environ["LANGCHAIN_TRACING_V2"] = "true"
-print("enter OPENAI_API_KEY:")
-os.environ["OPENAI_API_KEY"] = getpass.getpass()
+if os.environ["LANGCHAIN_API_KEY"] == "":
+    print("enter LANGCHAIN_API_KEY:")
+    os.environ["LANGCHAIN_API_KEY"] = getpass.getpass()
+    os.environ["LANGCHAIN_TRACING_V2"] = "true"
+
+if os.environ["OPENAI_API_KEY"] == "":
+    print("enter OPENAI_API_KEY:")
+    os.environ["OPENAI_API_KEY"] = getpass.getpass()
 
 # 1. Create prompt template
 system_template = "Translate the following into {language}:"
