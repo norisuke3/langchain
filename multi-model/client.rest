@@ -1,0 +1,11 @@
+# restclient.el
+# https://github.com/pashky/restclient.el/blob/master/README.md
+#
+# Post works too, entity just goes after an empty line. Same is for PUT.
+#
+POST http://localhost:8000/joke/invoke
+Content-Type: application/json
+
+{
+    "input": { "topic": "dogs" }
+}
