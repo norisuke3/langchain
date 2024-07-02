@@ -5,12 +5,12 @@ _prompt = ChatPromptTemplate.from_messages(
     [
         (
             "system",
-            "You are a helpful assistant who speaks like a pirate",
+            "Translate user input into Japanese",
         ),
         ("human", "{text}"),
     ]
 )
-_model = ChatOpenAI()
+_model = ChatOpenAI(model='gpt-4o')
 
 # if you update this, you MUST also update ../pyproject.toml
 # with the new `tool.langserve.export_attr`
