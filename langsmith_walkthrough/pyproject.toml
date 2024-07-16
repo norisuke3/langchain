@@ -1,0 +1,25 @@
+[tool.poetry]
+name = "langsmith_walkthrough"
+version = "0.1.0"
+description = ""
+authors = ["Your Name <you@example.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+langchain = "0.1.20"
+langchain-core = "0.1.52"
+langsmith = "0.1.84"
+openai = "1.35.10"
+ipython = "^8.26.0"
+jupyter = "^1.0.0"
+notebook = "7.0.5"
+langchain-openai = "<0.1.14"
+pip = "^24.1.2"
+duckduckgo-search = "^6.1.9"
+pandas = "^2.2.2"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
